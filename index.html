@@ -1,842 +1,859 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10152f">
 
-<title>STUDIO ASHISH HEADLINES | Official Website</title>
+  <title>STUDIO ASHISH HEADLINES | Official Developer Website</title>
+  <meta name="description" content="Official website of STUDIO ASHISH HEADLINES. Discover mobile applications, digital services, shopping platforms and software solutions by Ashish Nayak, Odisha, India.">
+  <meta name="keywords" content="STUDIO ASHISH HEADLINES, Ashish Nayak, ASHISH DIGITAL SEVA CSC, Android Apps, Odisha Developer, Sastaakart">
+  <meta name="author" content="STUDIO ASHISH HEADLINES">
 
-<meta name="description" content="Official website of STUDIO ASHISH HEADLINES. Explore mobile applications, digital services, software, support and developer information.">
-<meta name="keywords" content="STUDIO ASHISH HEADLINES, Ashish Nayak, Ashish Digital Seva CSC, Android Apps, Odisha Developer">
-<meta name="author" content="STUDIO ASHISH HEADLINES">
-<meta name="theme-color" content="#10152f">
+  <style>
+    :root {
+      --bg: #0b1024;
+      --card: #151d3b;
+      --text: #f7f8ff;
+      --muted: #b9c2df;
+      --primary: #7657ff;
+      --secondary: #00d4ff;
+      --border: rgba(255,255,255,.13);
+    }
 
-<style>
-:root {
-  --bg: #080d22;
-  --card: #151d3d;
-  --text: #ffffff;
-  --muted: #c5cce5;
-  --primary: #7657ff;
-  --secondary: #00d4ff;
-  --border: rgba(255,255,255,.12);
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
 
-.container {
-  width: 92%;
-  max-width: 1180px;
-  margin: auto;
-}
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,16,36,.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
 
-header {
-  background: rgba(8,13,34,.95);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(15px);
-}
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-.nav {
-  min-height: 75px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
+    .brand {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: .5px;
+      background: linear-gradient(90deg,#00d4ff,#a78bfa,#ff69b4);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
-.logo {
-  font-size: 21px;
-  font-weight: 900;
-  background: linear-gradient(90deg,#00d4ff,#a78bfa,#ff5ca8);
-  -webkit-background-clip: text;
-  color: transparent;
-}
+    .nav-links {
+      display: flex;
+      gap: 17px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: var(--muted);
+    }
 
-nav {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
+    .nav-links a:hover {
+      color: var(--secondary);
+    }
 
-nav a {
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: bold;
-}
+    .hero {
+      padding: 95px 0 80px;
+      text-align: center;
+      background:
+        radial-gradient(circle at 15% 20%,rgba(0,212,255,.18),transparent 32%),
+        radial-gradient(circle at 85% 30%,rgba(118,87,255,.25),transparent 35%),
+        linear-gradient(135deg,#111936,#17113c,#10152f);
+    }
 
-nav a:hover {
-  color: var(--secondary);
-}
+    .hero-tag {
+      display: inline-block;
+      padding: 7px 16px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      color: #8eeeff;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
 
-.hero {
-  padding: 100px 0 85px;
-  text-align: center;
-  background:
-    radial-gradient(circle at 20% 20%,rgba(0,212,255,.22),transparent 35%),
-    radial-gradient(circle at 80% 30%,rgba(118,87,255,.25),transparent 35%),
-    linear-gradient(135deg,#111b43,#080d22);
-}
+    .hero h1 {
+      font-size: clamp(34px,6vw,65px);
+      line-height: 1.15;
+      margin-bottom: 20px;
+      font-weight: 900;
+    }
 
-.hero-tag {
-  display: inline-block;
-  padding: 7px 17px;
-  border: 1px solid rgba(0,212,255,.4);
-  border-radius: 30px;
-  color: #71eaff;
-  font-size: 12px;
-  margin-bottom: 22px;
-}
+    .gradient {
+      background: linear-gradient(90deg,#00d4ff,#a78bfa,#ff72b6);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
-.hero h1 {
-  font-size: clamp(34px,6vw,65px);
-  line-height: 1.2;
-  font-weight: 900;
-  margin-bottom: 20px;
-}
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 17px;
+    }
 
-.gradient {
-  background: linear-gradient(90deg,#00d4ff,#a78bfa,#ff68b5);
-  -webkit-background-clip: text;
-  color: transparent;
-}
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 13px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
 
-.hero p {
-  max-width: 750px;
-  margin: auto;
-  color: var(--muted);
-  font-size: 16px;
-}
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-weight: bold;
+      background: linear-gradient(90deg,#7657ff,#00a9df);
+      color: white;
+      transition: .2s;
+    }
 
-.hero-buttons {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 13px;
-  flex-wrap: wrap;
-}
+    .btn:hover {
+      transform: translateY(-3px);
+      opacity: .9;
+    }
 
-.btn {
-  display: inline-block;
-  padding: 12px 23px;
-  border-radius: 10px;
-  background: linear-gradient(100deg,#6754ff,#00aeea);
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
-  transition: .3s;
-}
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+    }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0,212,255,.2);
-}
+    section {
+      padding: 70px 0;
+    }
 
-.btn-outline {
-  background: transparent;
-  border: 1px solid var(--border);
-}
+    .section-title {
+      text-align: center;
+      margin-bottom: 38px;
+    }
 
-section {
-  padding: 75px 0;
-}
+    .section-title h2 {
+      font-size: clamp(27px,4vw,40px);
+      margin-bottom: 10px;
+    }
 
-.section-heading {
-  text-align: center;
-  margin-bottom: 40px;
-}
+    .section-title p {
+      color: var(--muted);
+    }
 
-.section-heading h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(245px,1fr));
+      gap: 20px;
+    }
 
-.section-heading p {
-  color: var(--muted);
-}
+    .app-card {
+      background: linear-gradient(145deg,#182344,#111a34);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 23px;
+      transition: .25s;
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 20px;
-}
+    .app-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--secondary);
+    }
 
-.card {
-  background: linear-gradient(145deg,#192448,#101832);
-  border: 1px solid var(--border);
-  border-radius: 17px;
-  padding: 24px;
-  transition: .3s;
-}
+    .app-icon {
+      width: 55px;
+      height: 55px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      font-size: 27px;
+      margin-bottom: 17px;
+      background: linear-gradient(135deg,#7657ff,#00bce8);
+    }
 
-.card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(0,212,255,.5);
-}
+    .app-card h3 {
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
 
-.app-icon {
-  width: 58px;
-  height: 58px;
-  display: grid;
-  place-items: center;
-  font-size: 29px;
-  border-radius: 15px;
-  margin-bottom: 17px;
-  background: linear-gradient(135deg,#6955ff,#00bde9);
-}
+    .app-card p {
+      font-size: 14px;
+      color: var(--muted);
+      min-height: 70px;
+    }
 
-.card h3 {
-  font-size: 19px;
-  margin-bottom: 9px;
-}
+    .package {
+      display: block;
+      margin: 12px 0;
+      color: #91a5d5;
+      font-size: 11px;
+      overflow-wrap: anywhere;
+    }
 
-.card p {
-  color: var(--muted);
-  font-size: 13px;
-  margin-bottom: 14px;
-}
+    .status {
+      display: inline-block;
+      color: #8eeeff;
+      font-size: 11px;
+      margin-bottom: 12px;
+    }
 
-.status {
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 20px;
-  background: rgba(0,212,255,.1);
-  color: #72eaff;
-  font-size: 11px;
-  margin-bottom: 13px;
-}
+    .app-card .btn {
+      padding: 9px 15px;
+      font-size: 13px;
+    }
 
-.card .btn {
-  margin-top: 5px;
-}
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 20px;
+    }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-  gap: 20px;
-}
+    .info-card {
+      padding: 25px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
 
-.info-card {
-  padding: 27px;
-  border-radius: 16px;
-  background: var(--card);
-  border: 1px solid var(--border);
-}
+    .info-card h3 {
+      margin-bottom: 12px;
+      color: #8eeeff;
+    }
 
-.info-card h3 {
-  color: #70dcff;
-  margin-bottom: 12px;
-}
+    .info-card p,
+    .info-card li {
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-.info-card p {
-  color: var(--muted);
-  font-size: 14px;
-}
+    .info-card ul {
+      padding-left: 20px;
+    }
 
-.developer-info {
-  max-width: 800px;
-  margin: auto;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 28px;
-}
+    .developer-details {
+      max-width: 800px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 18px;
+      background: linear-gradient(145deg,#19254a,#141832);
+      border: 1px solid var(--border);
+    }
 
-.info-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border);
-  flex-wrap: wrap;
-}
+    .developer-details p {
+      padding: 7px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      overflow-wrap: anywhere;
+    }
 
-.info-row:last-child {
-  border-bottom: none;
-}
+    .developer-details strong {
+      color: white;
+    }
 
-.info-row span:first-child {
-  color: #8e9abb;
-}
+    .legal {
+      max-width: 900px;
+      margin: 0 auto 22px;
+      padding: 27px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+    }
 
-.info-row span:last-child {
-  font-weight: bold;
-  text-align: right;
-}
+    .legal h3 {
+      color: #8eeeff;
+      margin-bottom: 12px;
+    }
 
-.legal {
-  max-width: 950px;
-  margin: auto;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 17px;
-  padding: 30px;
-  margin-bottom: 25px;
-}
+    .legal p,
+    .legal li {
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-.legal h3 {
-  color: #70dcff;
-  margin: 20px 0 8px;
-}
+    .legal ul {
+      padding-left: 20px;
+    }
 
-.legal p,
-.legal li {
-  color: var(--muted);
-  font-size: 14px;
-}
+    .contact-box {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+      padding: 35px;
+      background: linear-gradient(135deg,#202b55,#17143d);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+    }
 
-.legal ul {
-  padding-left: 22px;
-}
+    .contact-box p {
+      color: var(--muted);
+      margin: 10px 0 20px;
+    }
 
-.contact-box {
-  text-align: center;
-  background: linear-gradient(135deg,#20285a,#152d49);
-  padding: 45px 25px;
-  border-radius: 20px;
-  border: 1px solid var(--border);
-}
+    footer {
+      padding: 35px 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      background: #080d1d;
+    }
 
-.contact-box p {
-  color: var(--muted);
-  margin: 12px 0 22px;
-}
+    footer p {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 7px 0;
+    }
 
-form {
-  max-width: 600px;
-  margin: 20px auto 0;
-  display: grid;
-  gap: 13px;
-}
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 15px 0;
+      font-size: 13px;
+    }
 
-input, textarea, select {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid var(--border);
-  background: #0c1430;
-  color: white;
-  border-radius: 9px;
-  font: inherit;
-}
+    .footer-links a:hover {
+      color: var(--secondary);
+    }
 
-textarea {
-  min-height: 120px;
-  resize: vertical;
-}
+    @media(max-width:600px) {
+      nav {
+        justify-content: center;
+        padding: 14px 0;
+      }
 
-footer {
-  background: #050918;
-  border-top: 1px solid var(--border);
-  padding: 35px 0;
-  text-align: center;
-}
+      .nav-links {
+        justify-content: center;
+        gap: 12px;
+      }
 
-footer p {
-  color: var(--muted);
-  font-size: 13px;
-  margin: 6px 0;
-}
+      .hero {
+        padding: 65px 0;
+      }
 
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 15px 0;
-}
+      section {
+        padding: 50px 0;
+      }
 
-.footer-links a {
-  color: #72dfff;
-  font-size: 13px;
-}
-
-@media(max-width:650px) {
-  .nav {
-    justify-content: center;
-    padding: 15px 0;
-  }
-
-  nav {
-    justify-content: center;
-    gap: 12px;
-  }
-
-  nav a {
-    font-size: 12px;
-  }
-
-  section {
-    padding: 55px 0;
-  }
-
-  .hero {
-    padding: 70px 0;
-  }
-
-  .info-row {
-    display: block;
-  }
-
-  .info-row span {
-    display: block;
-    text-align: left !important;
-  }
-}
-</style>
+      .developer-details,
+      .contact-box {
+        padding: 22px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <div class="container nav">
-    <a href="#home" class="logo">STUDIO ASHISH HEADLINES</a>
-
+  <div class="container">
     <nav>
-      <a href="#home">Home</a>
-      <a href="#apps">Our Apps</a>
-      <a href="#about">About</a>
-      <a href="#developer">Developer</a>
-      <a href="#privacy">Privacy</a>
-      <a href="#contact">Contact</a>
+      <a class="brand" href="#home">STUDIO ASHISH HEADLINES</a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#apps">Apps</a>
+        <a href="#about">About</a>
+        <a href="#developer">Developer</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
   </div>
 </header>
 
-<!-- HOME -->
+<main>
 
-<section class="hero" id="home">
+  <!-- HOME -->
+  <section class="hero" id="home">
+    <div class="container">
+      <span class="hero-tag">OFFICIAL DEVELOPER WEBSITE</span>
+
+      <h1>
+        Welcome to<br>
+        <span class="gradient">STUDIO ASHISH HEADLINES</span>
+      </h1>
+
+      <p>
+        Building useful digital experiences through mobile applications,
+        software solutions, creative technology and digital services.
+        Developed with a focus on simplicity, accessibility and innovation.
+      </p>
+
+      <div class="buttons">
+        <a class="btn" href="#apps">Explore Our Apps</a>
+        <a class="btn btn-outline" href="#contact">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPS -->
+  <section id="apps">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Our <span class="gradient">Applications & Projects</span></h2>
+        <p>Explore digital products and platforms from STUDIO ASHISH HEADLINES.</p>
+      </div>
+
+      <div class="app-grid">
+
+        <article class="app-card">
+          <div class="app-icon">📅</div>
+          <h3>Odia Calendar Pro - 2027</h3>
+          <p>Odia calendar application with useful calendar information and features.</p>
+          <small class="package">com.studioashish.odiacalendar</small>
+          <span class="status">Production</span><br>
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.studioashish.odiacalendar" target="_blank" rel="noopener">Google Play ↗</a>
+        </article>
+
+        <article class="app-card">
+          <div class="app-icon">📄</div>
+          <h3>Document Scanner & PDF Reader</h3>
+          <p>Scan documents, create PDF files and manage documents conveniently.</p>
+          <small class="package">com.studioashish.documentscanner</small>
+          <span class="status">Production</span><br>
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.studioashish.documentscanner" target="_blank" rel="noopener">Google Play ↗</a>
+        </article>
+
+        <article class="app-card">
+          <div class="app-icon">🛒</div>
+          <h3>Sastaakart - Online Shopping</h3>
+          <p>Explore the Sastaakart online shopping platform and its shopping services.</p>
+          <small class="package">Official Website</small>
+          <span class="status">Visit Official Website</span><br>
+          <a class="btn" href="https://sastaakart.com" target="_blank" rel="noopener">Visit Sastaakart ↗</a>
+        </article>
+
+        <article class="app-card">
+          <div class="app-icon">🧾</div>
+          <h3>Quick Bill Pro+</h3>
+          <p>A billing and business utility project.</p>
+          <small class="package">com.studioashish.quickbillproplusapp</small>
+          <span class="status">Unpublished</span>
+        </article>
+
+        <article class="app-card">
+          <div class="app-icon">🏪</div>
+          <h3>Local Mart - Online Shopping App</h3>
+          <p>A local shopping platform project designed to connect customers with local products and services.</p>
+          <small class="package">com.studioashish.localmartapp</small>
+          <span class="status">Under Review / Development</span>
+        </article>
+
+        <article class="app-card">
+          <div class="app-icon">🧩</div>
+          <h3>Arrow Puzzle - Tap to Escape</h3>
+          <p>A puzzle game project focused on logical thinking and enjoyable gameplay.</p>
+          <small class="package">com.studioashish.arrowpuzzia</small>
+          <span class="status">Internal Testing</span>
+        </article>
+
+        <article class="app-card">
+          <div class="app-icon">🎲</div>
+          <h3>Ludo Queen - Royal Board Game</h3>
+          <p>A digital board game experience for entertainment and casual gameplay.</p>
+          <small class="package">com.studioashish.ludoqueen</small>
+          <span class="status">Production</span><br>
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.studioashish.ludoqueen" target="_blank" rel="noopener">Google Play ↗</a>
+        </article>
+
+        <article class="app-card">
+          <div class="app-icon">🧮</div>
+          <h3>GST Calculator Premium</h3>
+          <p>A practical GST calculation tool for everyday tax calculations.</p>
+          <small class="package">com.gstcalculator.premium</small>
+          <span class="status">Production</span><br>
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.gstcalculator.premium" target="_blank" rel="noopener">Google Play ↗</a>
+        </article>
+
+        <article class="app-card">
+          <div class="app-icon">💼</div>
+          <h3>GST Calculator Pro (Paid)</h3>
+          <p>A paid GST calculator application for convenient tax calculations.</p>
+          <small class="package">com.ashishgstcalculator.pro</small>
+          <span class="status">Production</span><br>
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.ashishgstcalculator.pro" target="_blank" rel="noopener">Google Play ↗</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About <span class="gradient">Our Organization</span></h2>
+        <p>Who we are and what we aim to build.</p>
+      </div>
+
+      <div class="content-grid">
+
+        <div class="info-card">
+          <h3>Who We Are</h3>
+          <p>
+            STUDIO ASHISH HEADLINES is a digital development and creative
+            technology brand led by Ashish Nayak, based in Odisha, India.
+            We work on mobile applications, software projects and digital
+            platforms designed to make everyday tasks easier.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Our Mission</h3>
+          <p>
+            Our mission is to make digital tools simple, accessible and
+            convenient for everyone. We continuously aim to improve the
+            application experience by developing useful tools that help
+            users complete their everyday tasks.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Our Vision</h3>
+          <p>
+            Our vision is to grow as a trusted digital brand by creating
+            practical, reliable and user-friendly technology products
+            for people and businesses.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Our Services</h3>
+          <ul>
+            <li>Android application development</li>
+            <li>Software and digital solutions</li>
+            <li>Creative digital projects</li>
+            <li>Online platform development</li>
+            <li>Digital tools and utilities</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DEVELOPER INFORMATION -->
+  <section id="developer">
+    <div class="container">
+      <div class="section-title">
+        <h2>Developer <span class="gradient">Information</span></h2>
+        <p>Official organization and developer details.</p>
+      </div>
+
+      <div class="developer-details">
+        <p><strong>Developer / Organization:</strong> STUDIO ASHISH HEADLINES</p>
+        <p><strong>Developer Name:</strong> Ashish Nayak</p>
+        <p><strong>Location:</strong> Jagatsinghpur, Odisha, India</p>
+        <p><strong>Business Brand:</strong> ASHISH DIGITAL SEVA CSC</p>
+        <p><strong>Creative Brand:</strong> ASHISH</p>
+        <p><strong>Official Email:</strong> cscashishdigitalseva@gmail.com</p>
+        <p><strong>Website:</strong> STUDIO ASHISH HEADLINES Official Website</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVERTISING -->
+  <section id="advertising">
+    <div class="container">
+      <div class="section-title">
+        <h2>Advertising <span class="gradient">Information</span></h2>
+        <p>Information about advertising in our applications.</p>
+      </div>
+
+      <div class="legal">
+        <h3>Google AdMob Advertising</h3>
+        <p>
+          Some applications published by STUDIO ASHISH HEADLINES may use
+          Google AdMob to display advertisements. Advertising services
+          may use device-related information and identifiers as described
+          in Google's applicable policies and disclosures.
+        </p>
+        <p>
+          Users can learn more about Google's advertising and privacy
+          practices through Google's official privacy resources.
+        </p>
+        <p>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+            Google Privacy Policy ↗
+          </a>
+        </p>
+        <p>
+          <a href="/app-ads.txt">View app-ads.txt ↗</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY POLICY -->
+  <section id="privacy">
+    <div class="container">
+      <div class="section-title">
+        <h2>Privacy <span class="gradient">Policy</span></h2>
+        <p>How privacy is approached across our digital products.</p>
+      </div>
+
+      <div class="legal">
+        <h3>Privacy Policy - STUDIO ASHISH HEADLINES</h3>
+        <p><strong>Effective Date:</strong> November 3, 2026</p>
+
+        <p>
+          STUDIO ASHISH HEADLINES respects user privacy. This policy
+          explains general privacy practices for applications and
+          digital services published under our organization.
+        </p>
+
+        <br>
+        <h3>1. Information Collection</h3>
+        <p>
+          The information collected depends on the features and services
+          used in each application. Some applications may process
+          information such as device information, app diagnostics,
+          usage information or information voluntarily provided by users.
+          We do not intend to collect more information than is necessary
+          for the relevant app functionality.
+        </p>
+
+        <br>
+        <h3>2. Advertising Services</h3>
+        <p>
+          Some applications may use Google AdMob or other third-party
+          advertising services. These providers may process information
+          under their own privacy policies and applicable settings.
+        </p>
+
+        <br>
+        <h3>3. Data Storage and Security</h3>
+        <p>
+          Data handling and storage practices may differ between
+          applications. Where information is stored locally on a device,
+          users may be able to remove it by clearing app data or
+          uninstalling the application. This does not necessarily delete
+          information held by third-party services.
+        </p>
+
+        <br>
+        <h3>4. Third-Party Services</h3>
+        <p>
+          Applications may integrate third-party services for advertising,
+          app distribution, payments or other features. Their data
+          practices are governed by their own policies.
+        </p>
+
+        <br>
+        <h3>5. Children's Privacy</h3>
+        <p>
+          Our applications are not intended to knowingly collect personal
+          information from children in violation of applicable laws.
+          App-specific age ratings and audience settings should be
+          checked on the relevant store listing.
+        </p>
+
+        <br>
+        <h3>6. Policy Updates</h3>
+        <p>
+          We may update this policy when our applications, services or
+          legal requirements change. Updated information will be
+          published on this page.
+        </p>
+
+        <br>
+        <h3>7. Contact</h3>
+        <p>
+          For privacy-related questions, contact:
+          <strong>cscashishdigitalseva@gmail.com</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERMS -->
+  <section id="terms">
+    <div class="container">
+      <div class="section-title">
+        <h2>Terms & <span class="gradient">Conditions</span></h2>
+        <p>Terms for using our website and digital services.</p>
+      </div>
+
+      <div class="legal">
+        <h3>Terms of Use</h3>
+
+        <p>
+          By accessing this website or using applications published by
+          STUDIO ASHISH HEADLINES, users agree to use the services
+          responsibly and in accordance with applicable laws.
+        </p>
+
+        <br>
+        <h3>1. Acceptable Use</h3>
+        <p>
+          Users must not misuse our applications, attempt unauthorized
+          access, disrupt services or use our products for unlawful
+          activities.
+        </p>
+
+        <br>
+        <h3>2. Intellectual Property</h3>
+        <p>
+          Unless otherwise stated, the website design, branding,
+          original content and application materials belong to
+          STUDIO ASHISH HEADLINES or their respective owners.
+        </p>
+
+        <br>
+        <h3>3. Third-Party Services</h3>
+        <p>
+          Our website or applications may link to third-party websites
+          and services. We are not responsible for their content,
+          availability or policies.
+        </p>
+
+        <br>
+        <h3>4. Changes to Services</h3>
+        <p>
+          Features, content and availability may change as products
+          are improved or maintained.
+        </p>
+
+        <br>
+        <h3>5. Contact</h3>
+        <p>
+          Questions about these terms can be sent to
+          cscashishdigitalseva@gmail.com.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCOUNT DELETION -->
+  <section id="deletion">
+    <div class="container">
+      <div class="section-title">
+        <h2>Account <span class="gradient">Deletion Request</span></h2>
+        <p>Contact us about account or data deletion where applicable.</p>
+      </div>
+
+      <div class="legal">
+        <h3>Request Account or Data Deletion</h3>
+
+        <p>
+          If an application provides account creation or stores
+          account-related information, users may contact us to ask
+          about deletion of their account and associated personal data.
+        </p>
+
+        <p>
+          Please mention the application name and the account details
+          needed to identify your request. Do not send passwords,
+          payment PINs or other confidential credentials.
+        </p>
+
+        <br>
+
+        <a class="btn"
+           href="mailto:cscashishdigitalseva@gmail.com?subject=Account%20Deletion%20Request">
+          Send Deletion Request ↗
+        </a>
+
+        <p style="margin-top:18px;">
+          This button opens your email application to prepare a request.
+          It does not submit an automatic online form.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact <span class="gradient">Us</span></h2>
+        <p>For support, feedback, business enquiries and privacy questions.</p>
+      </div>
+
+      <div class="contact-box">
+        <h2>STUDIO ASHISH HEADLINES</h2>
+        <p>
+          We welcome your questions, suggestions and feedback.
+          Contact our official support email.
+        </p>
+
+        <a class="btn"
+           href="mailto:cscashishdigitalseva@gmail.com">
+          Email Official Support ↗
+        </a>
+
+        <p style="margin-top:20px;">
+          cscashishdigitalseva@gmail.com
+        </p>
+
+        <p>Jagatsinghpur, Odisha, India</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
   <div class="container">
-    <span class="hero-tag">OFFICIAL DEVELOPER WEBSITE</span>
+    <h3 class="brand">STUDIO ASHISH HEADLINES</h3>
 
-    <h1>
-      Welcome to <br>
-      <span class="gradient">STUDIO ASHISH HEADLINES</span>
-    </h1>
+    <p>Digital Innovation • Mobile Applications • Creative Technology</p>
+
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#apps">Applications</a>
+      <a href="#about">About</a>
+      <a href="#developer">Developer</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#terms">Terms</a>
+      <a href="#deletion">Account Deletion</a>
+      <a href="#contact">Contact</a>
+      <a href="/app-ads.txt">app-ads.txt</a>
+    </div>
 
     <p>
-      Creating useful digital experiences through mobile applications,
-      software solutions, creative technology and digital services.
-      Our goal is to make everyday technology simple and accessible.
+      © <span id="year"></span> STUDIO ASHISH HEADLINES.
+      All Rights Reserved.
     </p>
 
-    <div class="hero-buttons">
-      <a href="#apps" class="btn">Explore Our Apps</a>
-      <a href="#contact" class="btn btn-outline">Contact Us</a>
-    </div>
+    <p>Developed and managed by Ashish Nayak | Odisha, India</p>
   </div>
-</section>
-
-<!-- APPS -->
-
-<section id="apps">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Our Applications</h2>
-      <p>Explore applications developed and managed by STUDIO ASHISH HEADLINES.</p>
-    </div>
-
-    <div class="grid">
-
-      <div class="card">
-        <div class="app-icon">📅</div>
-        <h3>Odia Calendar Pro - 2027</h3>
-        <span class="status">Production</span>
-        <p>Odia calendar, important dates, festivals and useful calendar information.</p>
-        <small>Package: com.studioashish.odiacalendar</small><br><br>
-        <a class="btn" href="https://play.google.com/store/apps/details?id=com.studioashish.odiacalendar" target="_blank" rel="noopener">Google Play ↗</a>
-      </div>
-
-      <div class="card">
-        <div class="app-icon">📄</div>
-        <h3>Document Scanner & PDF Reader</h3>
-        <span class="status">Production</span>
-        <p>Scan documents, create PDFs and manage digital documents conveniently.</p>
-        <small>Package: com.studioashish.documentscanner</small><br><br>
-        <a class="btn" href="https://play.google.com/store/apps/details?id=com.studioashish.documentscanner" target="_blank" rel="noopener">Google Play ↗</a>
-      </div>
-
-      <div class="card">
-        <div class="app-icon">🛒</div>
-        <h3>Sastaakart Online Shopping</h3>
-        <span class="status">Online Shopping</span>
-        <p>Explore the Sastaakart online shopping platform and its services.</p>
-        <a class="btn" href="https://sastaakart.com" target="_blank" rel="noopener">Visit Sastaakart ↗</a>
-      </div>
-
-      <div class="card">
-        <div class="app-icon">🧾</div>
-        <h3>Quick Bill Pro+</h3>
-        <span class="status">Unpublished</span>
-        <p>A billing application project designed for convenient bill management.</p>
-        <small>Package: com.studioashish.quickbillproplusapp</small>
-      </div>
-
-      <div class="card">
-        <div class="app-icon">🏪</div>
-        <h3>Local Mart - Online Shopping</h3>
-        <span class="status">Under Review / Development</span>
-        <p>A local shopping platform project focused on convenient digital commerce.</p>
-        <small>Package: com.studioashish.localmartapp</small>
-      </div>
-
-      <div class="card">
-        <div class="app-icon">🧩</div>
-        <h3>Arrow Puzzle - Tap to Escape</h3>
-        <span class="status">Internal Testing</span>
-        <p>A puzzle game project designed to challenge logic and problem-solving skills.</p>
-        <small>Package: com.studioashish.arrowpuzzia</small>
-      </div>
-
-      <div class="card">
-        <div class="app-icon">🎲</div>
-        <h3>Ludo Queen - Royal Board Game</h3>
-        <span class="status">Production</span>
-        <p>Enjoy a digital board-game experience with Ludo Queen.</p>
-        <small>Package: com.studioashish.ludoqueen</small><br><br>
-        <a class="btn" href="https://play.google.com/store/apps/details?id=com.studioashish.ludoqueen" target="_blank" rel="noopener">Google Play ↗</a>
-      </div>
-
-      <div class="card">
-        <div class="app-icon">🧮</div>
-        <h3>GST Calculator Premium</h3>
-        <span class="status">Production</span>
-        <p>Calculate GST amounts and simplify everyday tax calculations.</p>
-        <small>Package: com.gstcalculator.premium</small><br><br>
-        <a class="btn" href="https://play.google.com/store/apps/details?id=com.gstcalculator.premium" target="_blank" rel="noopener">Google Play ↗</a>
-      </div>
-
-      <div class="card">
-        <div class="app-icon">💼</div>
-        <h3>GST Calculator Pro (Paid)</h3>
-        <span class="status">Production</span>
-        <p>A GST calculation utility designed for users who need a dedicated calculator.</p>
-        <small>Package: com.ashishgstcalculator.pro</small><br><br>
-        <a class="btn" href="https://play.google.com/store/apps/details?id=com.ashishgstcalculator.pro" target="_blank" rel="noopener">Google Play ↗</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>About Us</h2>
-      <p>Learn more about our organization and digital work.</p>
-    </div>
-
-    <div class="about-grid">
-
-      <div class="info-card">
-        <h3>Who We Are</h3>
-        <p>
-          STUDIO ASHISH HEADLINES is a digital development and creative
-          technology organization based in Odisha, India. We work on
-          mobile applications, software solutions and digital services.
-        </p>
-      </div>
-
-      <div class="info-card">
-        <h3>Our Mission</h3>
-        <p>
-          Our mission is to make digital technology simple, accessible
-          and useful for everyone. We aim to develop practical tools
-          that help people in their everyday activities.
-        </p>
-      </div>
-
-      <div class="info-card">
-        <h3>Our Vision</h3>
-        <p>
-          Our vision is to build reliable, user-friendly and innovative
-          digital products while continuously improving quality,
-          accessibility and user experience.
-        </p>
-      </div>
-
-      <div class="info-card">
-        <h3>What We Do</h3>
-        <p>
-          Android application development, software projects,
-          digital solutions, creative multimedia work and
-          technology-based services.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- DEVELOPER INFORMATION -->
-
-<section id="developer">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Developer Information</h2>
-      <p>Official organization and contact details.</p>
-    </div>
-
-    <div class="developer-info">
-
-      <div class="info-row">
-        <span>Developer / Organization</span>
-        <span>STUDIO ASHISH HEADLINES</span>
-      </div>
-
-      <div class="info-row">
-        <span>Developer Name</span>
-        <span>Ashish Nayak</span>
-      </div>
-
-      <div class="info-row">
-        <span>Location</span>
-        <span>Jagatsinghpur, Odisha, India</span>
-      </div>
-
-      <div class="info-row">
-        <span>Business Brand</span>
-        <span>ASHISH DIGITAL SEVA CSC</span>
-      </div>
-
-      <div class="info-row">
-        <span>Creative Brand</span>
-        <span>ASHISH</span>
-      </div>
-
-      <div class="info-row">
-        <span>Official Email</span>
-        <span>cscashishdigitalseva@gmail.com</span>
-      </div>
-
-      <div class="info-row">
-        <span>Developer Website</span>
-        <span>STUDIO ASHISH HEADLINES Official Website</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ADVERTISING -->
-
-<section id="advertising">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Advertising Information</h2>
-      <p>Information about advertising in supported applications.</p>
-    </div>
-
-    <div class="legal">
-      <h3>Google AdMob Advertising</h3>
-
-      <p>
-        Some applications published by STUDIO ASHISH HEADLINES
-        may display advertisements through Google AdMob.
-        Advertisements help support the development and maintenance
-        of free applications.
-      </p>
-
-      <h3>Advertising Partner</h3>
-      <p>Google AdMob</p>
-
-      <h3>Publisher ID</h3>
-      <p>pub-7355384518479385</p>
-
-      <h3>Advertising Transparency</h3>
-      <p>
-        Advertising and data practices may vary depending on the
-        application and the services integrated into it. Users can
-        review Google's advertising and privacy information.
-      </p>
-
-      <p>
-        <a class="btn" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy ↗</a>
-      </p>
-
-      <h3>app-ads.txt</h3>
-      <p>
-        Authorized digital advertising sellers information:
-      </p>
-
-      <p>
-        <a href="/app-ads.txt" target="_blank" rel="noopener" style="color:#70dcff;">View app-ads.txt ↗</a>
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- PRIVACY POLICY -->
-
-<section id="privacy">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Privacy Policy</h2>
-      <p>How we approach user privacy and information.</p>
-    </div>
-
-    <div class="legal">
-
-      <p><strong>Last Updated: 3 November 2026</strong></p>
-
-      <p>
-        STUDIO ASHISH HEADLINES respects the privacy of users.
-        This Privacy Policy explains general information about
-        the collection, use and protection of information in
-        our website and applications.
-      </p>
-
-      <h3>1. Information We Collect</h3>
-      <p>
-        The information collected depends on the features and
-        services used in each application. Some applications
-        may work offline and store documents or settings locally
-        on the user's device.
-      </p>
-
-      <h3>2. Personal Information</h3>
-      <p>
-        We do not intentionally request personal information
-        unless it is necessary for a particular feature or service.
-        If an application provides an account, contact or other
-        online feature, its specific data practices should be
-        explained within that application's policy.
-      </p>
-
-      <h3>3. Advertising and Third-Party Services</h3>
-      <p>
-        Some applications may use Google AdMob to display
-        advertisements. Third-party services may collect
-        information according to their own privacy policies.
-      </p>
-
-      <p>
-        Google Privacy Policy:
-        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:#70dcff;">Read here</a>
-      </p>
-
-      <h3>4. Device Permissions</h3>
-      <p>
-        Certain applications may request permissions such as
-        camera, storage or other device permissions to provide
-        their stated features. Permissions are used according
-        to the functionality of the relevant application.
-      </p>
-
-      <h3>5. Data Security</h3>
-      <p>
-        We aim to use appropriate measures to protect information.
-        However, no electronic storage or internet transmission
-        method can be guaranteed to be completely secure.
-      </p>
-
-      <h3>6. Children's Privacy</h3>
-      <p>
-        Our services are not intended to knowingly collect
-        personal information from children without appropriate
-        consent where required by applicable law.
-      </p>
-
-      <h3>7. External Links</h3>
-      <p>
-        Our website or applications may contain links to
-        third-party websites. We are not responsible for
-        the privacy practices of external websites.
-      </p>
-
-      <h3>8. Changes to This Policy</h3>
-      <p>
-        We may update this Privacy Policy when our services
-        or legal requirements change. Updated information
-        will be published on this page.
-      </p>
-
-      <h3>9. Contact</h3>
-      <p>
-        For privacy-related questions, contact:
-        <a href="mailto:cscashishdigitalseva@gmail.com" style="color:#70dcff;">
-          cscashishdigitalseva@gmail.com
-        </a>
-      </p>
-
-    </div>
-  </div>
-</section>
-
-<!-- TERMS -->
-
-<section id="terms">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Terms & Conditions</h2>
-      <p>Terms for using our website and services.</p>
-    </div>
-
-    <div class="legal">
-
-      <h3>1. Acceptance</h3>
-      <p>
-        By accessing this website or using our applications,
-        you agree to follow these Terms & Conditions.
-      </p>
-
-      <h3>2. Use of Services</h3>
-      <p>
-        Users must use our website and applications lawfully.
-        You must not misuse, disrupt or attempt unauthorized
-        access to our services.
-      </p>
-
-      <h3>3. Intellectual Property</h3>
-      <p>
-        Unless otherwise stated, the branding, design,
-        original content and software associated with
-        STUDIO ASHISH HEADLINES belong to their respective
-        owners and may not be copied or redistributed
-        without permission.
-      </p>
-
-      <h3>4. Third-Party Services</h3>
-      <p>
-        Our products may contain links or integrations
-        from third-party providers. Their services are
-        governed by their own terms and policies.
-      </p>
-
-      <h3>5. Availability</h3>
-      <p>
-        We may modify, update, suspend or discontinue
-        any service or feature when necessary.
-      </p>
-
-      <h3>6. Limitation of Liability</h3>
-      <p>
-        We aim to provide useful and reliable 
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
