@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d1a">
+  <meta name="description" content="Official website of STUDIO ASHISH HEADLINES. Discover useful Android applications, digital tools and software products developed by Ashish Nayak.">
+  <meta name="keywords" content="STUDIO ASHISH HEADLINES, Ashish Nayak, Android Apps, Document Scanner, Odia Calendar, ASHISH DIGITAL SEVA CSC">
+  <meta name="author" content="Ashish Nayak">
+  <title>STUDIO ASHISH HEADLINES | Official Website</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <style>
+    :root {
+      --bg: #080d1a;
+      --panel: #111a2e;
+      --text: #f5f7ff;
+      --muted: #aab5cc;
+      --accent: #60a5fa;
+      --accent2: #8b5cf6;
+      --border: rgba(255,255,255,.10);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, 91%); margin: auto; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(8,13,26,.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav {
+      min-height: 76px; display: flex;
+      align-items: center; justify-content: space-between;
+      gap: 20px; flex-wrap: wrap; padding: 12px 0;
+    }
+    .brand { font-size: 19px; font-weight: 800; letter-spacing: .5px; }
+    .brand span { color: var(--accent); }
+    .navlinks { display: flex; gap: 22px; flex-wrap: wrap; }
+    .navlinks a { color: var(--muted); font-size: 14px; }
+    .navlinks a:hover { color: white; }
+    .hero {
+      padding: 105px 0 90px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 20% 10%, rgba(96,165,250,.20), transparent 42%),
+        radial-gradient(ellipse at 85% 35%, rgba(139,92,246,.20), transparent 40%);
+    }
+    .tag {
+      display: inline-block; padding: 7px 15px;
+      border: 1px solid var(--border); border-radius: 30px;
+      color: #bfdbfe; font-size: 13px; margin-bottom: 22px;
+      background: rgba(255,255,255,.04);
+    }
+    h1 { font-size: clamp(36px, 7vw, 68px); line-height: 1.12; margin-bottom: 20px; }
+    .gradient {
+      background: linear-gradient(90deg, #60a5fa, #c4b5fd);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero p { max-width: 720px; margin: auto; color: var(--muted); font-size: 17px; }
+    .actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+    .btn {
+      display: inline-block; padding: 12px 23px; border-radius: 9px;
+      font-weight: 700; background: linear-gradient(100deg, #2563eb, #7c3aed);
+      color: white; transition: .2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.secondary { background: transparent; border: 1px solid var(--border); }
+    section { padding: 76px 0; }
+    .section-title { text-align: center; font-size: 32px; margin-bottom: 12px; }
+    .section-subtitle { text-align: center; color: var(--muted); max-width: 700px; margin: 0 auto 38px; }
+    .panel {
+      background: var(--panel); border: 1px solid var(--border);
+      padding: 28px; border-radius: 17px;
+    }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .panel h3 { font-size: 20px; margin-bottom: 12px; }
+    .panel p { color: var(--muted); }
+    .details { list-style: none; margin-top: 12px; }
+    .details li { padding: 7px 0; color: var(--muted); border-bottom: 1px solid var(--border); }
+    .details strong { color: white; }
+    .apps {
+      display: grid; grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 22px;
+    }
+    .app-card { display: flex; flex-direction: column; gap: 13px; }
+    .app-icon {
+      width: 58px; height: 58px; border-radius: 15px;
+      display: grid; place-items: center; font-size: 27px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+    }
+    .app-card p { flex: 1; }
+    .app-card .btn { align-self: flex-start; margin-top: 5px; }
+    .contact-box { text-align: center; max-width: 760px; margin: auto; }
+    .contact-box p { color: var(--muted); margin: 10px 0; }
+    .contact-links { margin-top: 24px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .contact-links a { color: #bfdbfe; overflow-wrap: anywhere; }
+    footer { border-top: 1px solid var(--border); padding: 28px 0; text-align: center; color: var(--muted); font-size: 13px; }
+    footer .footlinks { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px; margin-top: 12px; }
+    footer a:hover { color: white; }
+    @media (max-width: 700px) {
+      nav { justify-content: center; }
+      .navlinks { justify-content: center; gap: 14px; }
+      .hero { padding: 75px 0; }
+      .about-grid, .apps { grid-template-columns: 1fr; }
+      section { padding: 58px 0; }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#home">STUDIO <span>ASHISH</span> HEADLINES</a>
+      <div class="navlinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#apps">Our Apps</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container">
+      <span class="tag">OFFICIAL DEVELOPER WEBSITE</span>
+      <h1>Ideas into <span class="gradient">Digital Solutions.</span></h1>
+      <p>
+        Welcome to STUDIO ASHISH HEADLINES. We create useful digital
+        applications and software solutions designed to make everyday
+        tasks simpler, smarter and more convenient.
+      </p>
+      <div class="actions">
+        <a class="btn" href="#apps">Explore Our Apps</a>
+        <a class="btn secondary" href="#contact">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="section-subtitle">
+        Technology, creativity and practical digital solutions.
+      </p>
+
+      <div class="about-grid">
+        <div class="panel">
+          <h3>Who We Are</h3>
+          <p>
+            STUDIO ASHISH HEADLINES is an independent software and digital
+            brand focused on developing useful applications and creative
+            digital products. Our goal is to deliver accessible,
+            user-friendly and reliable digital experiences.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3>Our Mission</h3>
+          <p>
+            Our mission is to make digital document management simple,
+            accessible and convenient for everyone. We continuously aim
+            to improve the application experience by developing useful
+            tools that help users complete their everyday document tasks.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3>Developer Information</h3>
+          <ul class="details">
+            <li><strong>Developer / Organization:</strong> STUDIO ASHISH HEADLINES</li>
+            <li><strong>Developer Name:</strong> Ashish Nayak</li>
+            <li><strong>Location:</strong> Jagatsinghpur, Odisha, India</li>
+            <li><strong>Business Brand:</strong> ASHISH DIGITAL SEVA CSC</li>
+            <li><strong>Creative Brand:</strong> ASHISH NAYAK CINE PRODUCTION</li>
+            <li><strong>Established:</strong> 2017</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Our Commitment</h3>
+          <p>
+            We aim to improve our products through updates, useful
+            features and user feedback. We value simplicity, transparency
+            and a better experience for our users.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apps">
+    <div class="container">
+      <h2 class="section-title">Our Applications</h2>
+      <p class="section-subtitle">
+        Explore our Android applications available on Google Play.
+      </p>
+
+      <div class="apps">
+        <article class="panel app-card">
+          <div class="app-icon">📄</div>
+          <h3>Document Scanner & PDF Reader</h3>
+          <p>
+            Scan documents, organize pages and manage PDF files with
+            a convenient document management experience.
+          </p>
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://play.google.com/store/apps/details?id=com.studioashish.documentscanner">
+            Get it on Google Play
+          </a>
+        </article>
+
+        <article class="panel app-card">
+          <div class="app-icon">📅</div>
+          <h3>Odia Calendar Pro</h3>
+          <p>
+            An Odia calendar application designed to help users access
+            calendar information and useful daily features.
+          </p>
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://play.google.com/store/apps/details?id=com.studioashish.odiacalendar">
+            Get it on Google Play
+          </a>
+        </article>
+
+        <article class="panel app-card">
+          <div class="app-icon">🧮</div>
+          <h3>GST Calculator Premium</h3>
+          <p>
+            A practical calculator application to help users with
+            everyday GST calculations.
+          </p>
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://play.google.com/store/apps/details?id=com.gstcalculator.premium">
+            Get it on Google Play
+          </a>
+        </article>
+
+        <article class="panel app-card">
+          <div class="app-icon">🎲</div>
+          <h3>Ludo Queen</h3>
+          <p>
+            Enjoy a digital board-game experience with Ludo Queen.
+            Visit the Google Play listing for availability and details.
+          </p>
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://play.google.com/store/apps/details?id=com.ludoqueen">
+            Get it on Google Play
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="panel contact-box">
+        <h2 class="section-title">Contact & Support</h2>
+        <p>
+          For app-related questions, technical support, feedback or
+          suggestions, please contact us through the details below.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:cscashishdigitalseva@gmail.com">
+            Email: cscashishdigitalseva@gmail.com
+          </a>
+          <a href="tel:+916371946245">
+            Phone: +91 6371946245
+          </a>
+        </div>
+        <p>Jagatsinghpur, Odisha, India</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> STUDIO ASHISH HEADLINES. All Rights Reserved.</p>
+    <div class="footlinks">
+      <a href="index.html">Home</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="app-ads.txt">app-ads.txt</a>
+      <a href="mailto:cscashishdigitalseva@gmail.com">Support</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
